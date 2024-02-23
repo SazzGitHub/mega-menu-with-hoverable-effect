@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Mega Menu with Hoverable Effect</title>
+   
+    <style>
+        /* 
+        below is the same styling css code as '/style.css' code file, the reason to put a copy of the same style css is to make it run on GitHub Page... feel free to put one in any way you like...
+        */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+        }
+
+        /* padding for the main content left and right */
+        .main-container {
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+
+        /* design nav container here */
+        .main-container .nav-container {
+            /* make sure the parent class is set to relative inside which the mega-menu is */
+            position: relative;
+            background-color: rgb(35, 35, 35);
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            /* gap: 25px; */
+        }
+
+        /* put '>' sign after each class/id for effective styling */
+
+        .main-container .nav-container> nav> ul {
+            display: flex;
+            gap: 25px;
+            list-style-type: none;
+        }
+
+        .main-container .nav-container> nav> ul> li> a {
+            font-size: 22px;
+            text-decoration: none;
+            color: rgb(255, 94, 0);
+        }
+        .main-container .nav-container> nav> ul> li> a:hover {
+            opacity: 0.9;
+            transition: 1s;
+        }
+        .main-container .nav-container> nav> ul> li:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            top: 90%;
+        }
+
+        /* design mega menu div here */
+        .mega-menu {
+            background-color: rgb(52, 52, 52);
+            /* make sure the mega-menu class is set to absolute */
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            top: 100%;
+            width: 100%;
+            left: 0;
+            padding: 25px;
+            z-index: 1;
+
+            /* below is used to hide the content and transition gives a user flow smooth effect */
+            opacity: 0;
+            visibility: hidden;
+            transition: 1s;
+        }
+        .mega-menu-items {
+            /* sets the initial main size of a flex item */
+            flex-basis: 25%;
+            margin: 1%;
+        }
+        .mega-menu-items h3 {
+            font-size: 20px;
+            color: gray;
+        }
+        .mega-menu-items ul {
+            list-style-type: none;
+        }
+        .mega-menu-items ul li {
+            padding: 5px 0;
+            margin: 2%;
+        }
+        .mega-menu-items ul li a {
+            text-decoration: none;
+            font-size: 16px;
+            color: rgb(255, 111, 0);
+        }
+        .mega-menu-items ul li a:hover {
+            opacity: 0.9;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="nav-container">
+            <!-- logo could be here -->
+            <img width="5%" onclick="location.href='/'" src="/assets/images/nav-myname-logo.png" alt="my-image-logo" style="cursor: pointer;">
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li>
+                        <a href="#">SERVICES</a>
+                        <!-- mega menu items listings for SERVICES -->
+                        <div class="mega-menu">
+                            <div class="mega-menu-items">
+                                <!-- mega menu items listings heading -->
+                                <h3>
+                                    Mega Menu 1
+                                </h3>
+                                <ul>
+                                    <li><a href="#">Mega Menu Item 1</a></li>
+                                    <li><a href="#">Mega Menu Item 2</a></li>
+                                    <li><a href="#">Mega Menu Item 3</a></li>
+                                    <li><a href="#">Mega Menu Item 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-items">
+                                <h3>
+                                    Mega Menu 2
+                                </h3>
+                                <ul>
+                                    <li><a href="#">Mega Menu Item 1</a></li>
+                                    <li><a href="#">Mega Menu Item 2</a></li>
+                                    <li><a href="#">Mega Menu Item 3</a></li>
+                                    <li><a href="#">Mega Menu Item 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-items">
+                                <h3>
+                                    Mega Menu 3
+                                </h3>
+                                <ul>
+                                    <li><a href="#">Mega Menu Item 1</a></li>
+                                    <li><a href="#">Mega Menu Item 2</a></li>
+                                    <li><a href="#">Mega Menu Item 3</a></li>
+                                    <li><a href="#">Mega Menu Item 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-items">
+                                <h3>
+                                    Mega Menu 4
+                                </h3>
+                                <ul>
+                                    <li><a href="#">Mega Menu Item 1</a></li>
+                                    <li><a href="#">Mega Menu Item 2</a></li>
+                                    <li><a href="#">Mega Menu Item 3</a></li>
+                                    <li><a href="#">Mega Menu Item 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-items">
+                                <h3>
+                                    Mega Menu 5
+                                </h3>
+                                <ul>
+                                    <li><a href="#">Mega Menu Item 1</a></li>
+                                    <li><a href="#">Mega Menu Item 2</a></li>
+                                    <li><a href="#">Mega Menu Item 3</a></li>
+                                    <li><a href="#">Mega Menu Item 4</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</body>
+</html>
