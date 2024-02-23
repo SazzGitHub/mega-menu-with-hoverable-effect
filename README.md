@@ -8,7 +8,7 @@ Features
   Responsive: Currently optimized for desktop use.
 
 Clone the repository:
-  git clone https://github.com/your-username/mega-menu-with-hoverable-effect.git
+  git clone [https://github.com/your-username/mega-menu-with-hoverable-effect.git](https://github.com/SazzGitHub/mega-menu-with-hoverable-effect.git)
   
 Open the index.html file in your preferred browser to view.
 
